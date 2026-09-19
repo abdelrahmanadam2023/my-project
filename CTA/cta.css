@@ -1,143 +1,82 @@
-/* =========================
-   CTA SECTION
-========================= */
-
 .cta-section {
-    padding: 100px 7%;
-    background: #080c11;
+    padding: 90px 0;
+    background: #070c11;
 }
 
 .cta-container {
-    max-width: 1400px;
-    margin: 0 auto;
-}
+    width: min(1025px, 90%);
+    min-height: 260px;
+    margin: auto;
+    padding: 55px 60px;
 
-.cta-content {
-    position: relative;
-    overflow: hidden;
-    padding: 75px 80px;
-    border: 1px solid #263343;
-    border-radius: 16px;
+    display: flex;
+    align-items: center;
+
     background:
         radial-gradient(
             circle at 85% 50%,
-            rgba(37, 99, 235, 0.18),
-            transparent 35%
+            rgba(39, 110, 255, .16),
+            transparent 30%
         ),
-        linear-gradient(
-            135deg,
-            #111a25,
-            #0d131b
-        );
+        linear-gradient(135deg, #111c2d, #0b1421);
+
+    border: 1px solid rgba(70, 130, 220, .25);
+    border-radius: 14px;
 }
 
-.cta-content::before {
-    content: "";
-    position: absolute;
-    width: 280px;
-    height: 280px;
-    right: -100px;
-    top: -100px;
-    border: 1px solid rgba(59, 130, 246, 0.15);
-    border-radius: 50%;
-}
-
-.cta-content::after {
-    content: "";
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    right: 40px;
-    bottom: -100px;
-    border: 1px solid rgba(59, 130, 246, 0.1);
-    border-radius: 50%;
+.cta-content {
+    max-width: 700px;
 }
 
 .cta-label {
-    position: relative;
-    z-index: 2;
-    display: block;
-    margin-bottom: 18px;
-    color: #3b82f6;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #4b8cff;
 }
 
 .cta-content h2 {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    margin-bottom: 20px;
-    color: #ffffff;
-    font-size: clamp(38px, 5vw, 65px);
-    line-height: 1.08;
-    letter-spacing: -1.5px;
+    margin: 12px 0 15px;
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1;
+    color: #fff;
 }
 
 .cta-content h2 span {
-    color: #3b82f6;
+    color: #367ff5;
 }
 
 .cta-content p {
-    position: relative;
-    z-index: 2;
-    max-width: 650px;
-    margin-bottom: 30px;
-    color: #929eac;
-    font-size: 17px;
-    line-height: 1.8;
+    margin: 0 0 28px;
+    color: rgba(255,255,255,.55);
+    font-size: 14px;
 }
 
 .cta-button {
-    position: relative;
-    z-index: 2;
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 24px;
-    border-radius: 6px;
-    background: #2563eb;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 700;
-    transition: all 0.3s ease;
-}
 
-.cta-button span {
-    font-size: 20px;
-    transition: 0.3s ease;
+    padding: 14px 20px;
+
+    background: #286df0;
+    color: #fff;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: .25s;
 }
 
 .cta-button:hover {
-    background: #1d4ed8;
+    background: #3b7df4;
     transform: translateY(-2px);
 }
 
-.cta-button:hover span {
-    transform: translateX(5px);
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 700px) {
-
-    .cta-section {
-        padding: 70px 6%;
-    }
-
-    .cta-content {
-        padding: 50px 30px;
-    }
-
-    .cta-content h2 {
-        font-size: 38px;
-    }
-
-    .cta-content p {
-        font-size: 15px;
+@media (max-width: 600px) {
+    .cta-container {
+        padding: 40px 30px;
     }
 }

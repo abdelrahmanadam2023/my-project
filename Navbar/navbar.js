@@ -1,11 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
 
-    /*
-    =========================
-    LOAD COMPONENTS
-    =========================
-    */
-
     const navbar = document.getElementById("navbar");
     const cta = document.getElementById("cta");
     const footer = document.getElementById("footer");
@@ -22,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             navbar.innerHTML = await response.text();
 
         } catch (error) {
-            console.error(error);
+            console.error("Navbar Error:", error);
         }
     }
 
@@ -38,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             cta.innerHTML = await response.text();
 
         } catch (error) {
-            console.error(error);
+            console.error("CTA Error:", error);
         }
     }
 
@@ -54,29 +48,18 @@ document.addEventListener("DOMContentLoaded", async () => {
             footer.innerHTML = await response.text();
 
         } catch (error) {
-            console.error(error);
+            console.error("Footer Error:", error);
         }
     }
 
 
-    /*
-    =========================
-    MOBILE MENU
-    =========================
-    */
-
     const menuToggle = document.getElementById("menuToggle");
     const navMenu = document.querySelector(".nav-menu");
 
-
     if (menuToggle && navMenu) {
-
         menuToggle.addEventListener("click", () => {
-
             navMenu.classList.toggle("active");
-
         });
-
     }
 
 });
